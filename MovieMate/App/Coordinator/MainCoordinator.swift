@@ -16,7 +16,7 @@ final class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let viewController = ViewController()
+        let viewController = MoviesSearchViewController()
         navigationController.pushViewController(viewController, animated: false)
     }
 }
