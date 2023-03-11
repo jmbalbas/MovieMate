@@ -25,10 +25,17 @@ class MoviesSearchViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = .white
         setupSearchController()
+        setupResultsCollectionView()
     }
 
     private func setupSearchController() {
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
+
+    private func setupResultsCollectionView() {
+        let collectionViewController = MoviesCollectionViewController()
+        add(child: collectionViewController, inside: view)
     }
 }
 
